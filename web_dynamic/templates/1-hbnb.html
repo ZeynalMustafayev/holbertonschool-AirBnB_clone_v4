@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css">
-    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css">
-    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css">
-    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css">
-    <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css?">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css?">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css?">
+    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css?">
+    <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css?">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../static/scripts/1-hbnb.js?{{cache.id}}"></script>
+    <script src="../static/scripts/1-hbnb.js?{{cache_id}}"></script>
     <title>HBnB</title>
   </head>
   <body>
@@ -41,7 +41,7 @@
 	  <div class="popover">
 	    <ul>
 	      {% for amenity in amenities %}
-	      <li>{{ amenity.name }}</li>
+	      <li><input type="checkbox" data-id="{{  amenity.id  }}" data-name="{{ amenity.name }}">{{ amenity.name }}</li>
 	      {% endfor %}
 	    </ul>
 	  </div>
